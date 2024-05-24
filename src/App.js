@@ -16,7 +16,9 @@ function App() {
         console.error("Audio stream not available.");
         return;
       }
-      const response = await fetch("http://localhost:8000/token");
+      const response = await fetch(
+        "https://realtime-react-example.onrender.com/token"
+      );
       const data = await response.json();
 
       if (data.error) {
